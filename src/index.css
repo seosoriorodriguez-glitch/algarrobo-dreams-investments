@@ -215,6 +215,20 @@
   .section-divider {
     @apply w-24 h-1 bg-ocean mx-auto;
   }
+
+  /* Ken Burns Effect - Subtle Zoom Animation */
+  .animate-ken-burns {
+    animation: ken-burns 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
 }
 
 @layer utilities {

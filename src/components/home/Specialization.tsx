@@ -13,6 +13,7 @@ const specializations = [
     icon: Target,
     title: 'Selección Limitada',
     description: 'Solo trabajamos con propiedades que cumplen nuestros estándares de calidad y potencial de inversión.',
+    featured: true,
   },
   {
     icon: TrendingUp,
@@ -40,27 +41,82 @@ const Specialization = () => {
             </p>
           </div>
 
-          {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {specializations.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-sand rounded-full mb-6">
-                  <item.icon className="w-8 h-8 text-ocean" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-stone-dark mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-stone leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+          {/* Premium Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-center">
+            {specializations.map((item, index) => {
+              const isFeatured = item.featured;
+              
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: index * 0.15,
+                    ease: [0.25, 0.46, 0.45, 0.94]
+                  }}
+                  className={cn(
+                    // Base card styles
+                    "group relative text-center rounded-2xl transition-all duration-300 ease-out",
+                    // Fondo y borde premium
+                    "bg-[#FDFCFA] border border-stone-200/50",
+                    // Padding responsive
+                    "p-6 md:p-10",
+                    // Sombra base
+                    "shadow-sm",
+                    // Hover effects (desktop)
+                    "md:hover:-translate-y-2 md:hover:shadow-xl",
+                    // Featured card - destacada
+                    isFeatured && [
+                      "md:scale-105 md:shadow-lg",
+                      "md:border-ocean/20",
+                      "md:hover:shadow-2xl",
+                      "md:z-10"
+                    ]
+                  )}
+                >
+                  {/* Accent line for featured card */}
+                  {isFeatured && (
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-ocean/60 via-ocean to-ocean/60 rounded-full hidden md:block" />
+                  )}
+                  
+                  {/* Icon Circle - Protagonista */}
+                  <div 
+                    className={cn(
+                      "inline-flex items-center justify-center rounded-full mb-6",
+                      // Tamaño aumentado 25%
+                      "w-20 h-20",
+                      // Fondo con transición
+                      "bg-ocean/10 transition-all duration-300",
+                      // Hover effect en el círculo
+                      "group-hover:bg-ocean/20 group-hover:scale-110"
+                    )}
+                  >
+                    <item.icon 
+                      className={cn(
+                        // Tamaño aumentado 25%
+                        "w-10 h-10",
+                        // Color con transición
+                        "text-ocean transition-colors duration-300",
+                        "group-hover:text-ocean"
+                      )} 
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                  
+                  {/* Title - Bold y prominente */}
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-stone-dark mb-3">
+                    {item.title}
+                  </h3>
+                  
+                  {/* Description - Suave, mejor interlineado */}
+                  <p className="text-stone-light text-sm md:text-base leading-relaxed max-w-xs mx-auto">
+                    {item.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ const AlgarroboDestination = () => {
               >
                 <Link
                   to="/algarrobo"
-                  className="group block bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 text-center"
+                  className="group block bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center border border-stone-100"
                 >
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-ocean/10 rounded-full mb-4 group-hover:bg-ocean/20 transition-colors">
                     <attraction.icon className="w-7 h-7 text-ocean" />
@@ -77,7 +77,7 @@ const AlgarroboDestination = () => {
           <div className="text-center">
             <Link
               to="/algarrobo"
-              className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors shadow-lg hover:shadow-xl"
             >
               Descubre Algarrobo
               <ArrowRight className="w-4 h-4" />

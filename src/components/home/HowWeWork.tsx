@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { MessageCircle, Phone, Calendar, Handshake } from 'lucide-react';
+import { MessageCircle, Phone, Calendar, Handshake, KeyRound, TrendingUp } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { getWhatsAppLink } from '@/components/layout/Header';
 
 const steps = [
   {
@@ -83,6 +85,72 @@ const HowWeWork = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Bonus Premium - Servicio de Monetización */}
+      <div className="bg-gradient-to-b from-sand/50 to-sand mt-16">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            {/* Premium Card */}
+            <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-stone-200/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              {/* Optional Badge */}
+              <div className="absolute -top-3 left-8 px-4 py-1 bg-ocean/10 rounded-full">
+                <span className="text-xs font-medium text-ocean tracking-wide">Servicio opcional</span>
+              </div>
+
+              <div className="flex flex-col md:flex-row md:items-center gap-8">
+                {/* Icon Section */}
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="w-20 h-20 bg-gradient-to-br from-ocean/10 to-ocean/5 rounded-2xl flex items-center justify-center group-hover:from-ocean/15 group-hover:to-ocean/10 transition-all duration-300">
+                      <KeyRound className="w-8 h-8 text-ocean" strokeWidth={1.5} />
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-sand rounded-lg flex items-center justify-center border border-stone-200/50">
+                      <TrendingUp className="w-4 h-4 text-ocean" strokeWidth={2} />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="flex-grow">
+                  <h3 className="font-serif text-2xl md:text-3xl font-semibold text-stone-dark mb-2">
+                    Monetizamos tu inversión
+                  </h3>
+                  <p className="text-stone-light text-sm mb-4">
+                    Para propietarios que buscan rentabilidad y tranquilidad
+                  </p>
+                  <p className="text-stone leading-relaxed">
+                    Gestión integral de arriendo turístico para que tu propiedad genere ingresos 
+                    incluso después de la compra, con total tranquilidad y profesionalismo.
+                  </p>
+                </div>
+
+                {/* CTA Section */}
+                <div className="flex-shrink-0 md:self-center">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-ocean/30 text-ocean hover:bg-ocean/5 hover:border-ocean/50 transition-all duration-300"
+                  >
+                    <a 
+                      href={getWhatsAppLink("Hola, me interesa conocer el servicio de arriendo turístico")} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Conoce este servicio
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

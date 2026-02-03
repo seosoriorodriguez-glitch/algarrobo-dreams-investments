@@ -15,49 +15,49 @@ const attractions = [
     title: 'Playas Paradisíacas',
     description: 'Algarrobo cuenta con algunas de las playas más hermosas de la costa central. El Canelo y El Canelillo ofrecen aguas tranquilas ideales para familias, mientras que la playa principal es perfecta para largos paseos al atardecer.',
     highlights: ['Playa El Canelo', 'Playa El Canelillo', 'Playa Grande', 'Bahía protegida'],
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/5b/30/ae/the-beach.jpg?w=1200&h=800&s=1',
   },
   {
     icon: UtensilsCrossed,
     title: 'Gastronomía Costera',
     description: 'Desde ceviches frescos hasta mariscos preparados de forma tradicional, la oferta gastronómica de Algarrobo refleja lo mejor del océano Pacífico. Restaurantes con vista al mar completan una experiencia culinaria inolvidable.',
     highlights: ['Mariscos frescos', 'Restaurantes con vista', 'Cocina tradicional', 'Bares de vino'],
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=500&fit=crop',
+    image: 'https://www.algarrobo.cl/wp-content/uploads/2025/01/gastronomia-algarrobo.jpeg',
   },
   {
     icon: Users,
     title: 'Turismo Familiar',
     description: 'Algarrobo es un destino perfecto para toda la familia. Sus playas seguras, paseos en bote, y múltiples actividades al aire libre crean recuerdos que duran para siempre.',
     highlights: ['Playas seguras', 'Actividades al aire libre', 'Paseos en bote', 'Entorno tranquilo'],
-    image: 'https://images.unsplash.com/photo-1559839914-17aae19cec71?w=800&h=500&fit=crop',
+    image: 'https://cms-media.getmyboat.com/production/images/GetMyBoats_Guides_t.2e16d0ba.fill-708x386.jpegquality-80.jpg',
   },
   {
     icon: Clock,
     title: 'A 1 Hora de Santiago',
     description: 'La conectividad privilegiada de Algarrobo permite disfrutar de la costa sin sacrificar la vida urbana. En poco más de una hora desde Santiago, estarás respirando aire de mar.',
     highlights: ['Ruta 68 directa', '90 minutos desde Santiago', 'Acceso fácil', 'Escapada de fin de semana'],
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop',
+    image: 'https://media.istockphoto.com/id/1055655978/es/foto/telef%C3%A9rico-en-el-cerro-san-crist%C3%B3bal-domina-una-vista-panor%C3%A1mica-de-santiago.jpg?s=612x612&w=0&k=20&c=1cxgXQ3rGK7-sZNohB-94zSNmLSoZhq_jwFhNSo4y3E=',
   },
   {
     icon: TreePine,
     title: 'Naturaleza y Ecoturismo',
     description: 'El Humedal El Yali, las cabalgatas por la costa, y los senderos naturales ofrecen una conexión única con la naturaleza. Un equilibrio perfecto entre desarrollo y preservación.',
     highlights: ['Humedal El Yali', 'Cabalgatas costeras', 'Senderos naturales', 'Avistamiento de aves'],
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop',
+    image: 'https://munialgarrobo.cl/wp-content/uploads/2023/10/Copia-de-EttPCLQWYAAzqFn.jpg',
   },
   {
     icon: Landmark,
     title: 'Cultura e Historia',
     description: 'La cercana Casa Museo de Pablo Neruda en Isla Negra es un tesoro cultural. Descubre la inspiración del poeta Nobel y su profunda conexión con el océano.',
     highlights: ['Casa Museo Neruda', 'Isla Negra', 'Historia local', 'Arte y cultura'],
-    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=500&fit=crop',
+    image: 'https://cultura.fundacionneruda.org/wp-content/uploads/2023/12/cultura-fundacion-pablo-neruda-casas-museo-15.jpeg',
   },
   {
     icon: GlassWater,
     title: 'Valle de Casablanca',
     description: 'A pocos minutos de Algarrobo, el Valle de Casablanca ofrece las mejores viñas de la zona central. Tours de vino, degustaciones premium, y paisajes de postal.',
     highlights: ['Tours de vino', 'Viñas premium', 'Degustaciones', 'Gastronomía de autor'],
-    image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&h=500&fit=crop',
+    image: 'https://www.kingstonvineyards.com/wp-content/uploads/2025/09/CASABLANCA-ESSE-2-1024x683.jpg',
   },
 ];
 
@@ -66,16 +66,19 @@ const premiumActivities = [
     icon: Ship,
     title: 'Club de Yates',
     description: 'El Club de Yates de Algarrobo es uno de los más prestigiosos de Chile, ofreciendo instalaciones de primer nivel y una comunidad náutica exclusiva.',
+    image: 'https://revistamarina.cl/storage/app/uploads/public/e60/196/bb3/thumb__844_406_0_0_crop.jpg',
   },
   {
     icon: Anchor,
     title: 'Paseos en Lancha',
     description: 'Explora la bahía desde el agua. Los paseos en lancha ofrecen vistas espectaculares de la costa y la posibilidad de avistar fauna marina.',
+    image: 'https://www.latercera.com/resizer/v2/G4H2RIUXK5BEHFCZ7LWMAM7XI4.jpg?auth=bad6aab80d2313f134ea552172ea9fdf65bf60f080afff3efe779b12f1723e0c&smart=true&width=800&height=533&quality=70',
   },
   {
     icon: Fish,
     title: 'Buceo en Quintay',
     description: 'A pocos kilómetros, Quintay ofrece algunos de los mejores sitios de buceo de la zona central, con aguas cristalinas y vida marina abundante.',
+    image: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&h=600&fit=crop',
   },
 ];
 
@@ -89,7 +92,7 @@ const Algarrobo = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1920&h=1080&fit=crop')` 
+            backgroundImage: `url('https://a0.muscache.com/im/pictures/ae5bd9ca-17d6-4c9b-9191-4d70a02fdfce.jpg')` 
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -186,24 +189,36 @@ const Algarrobo = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {premiumActivities.map((activity, index) => (
                 <motion.div
                   key={activity.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="bg-card p-8 rounded-lg shadow-sm text-center"
+                  className="group relative h-[320px] rounded-xl overflow-hidden shadow-lg cursor-pointer"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-ocean/10 rounded-full mb-6">
-                    <activity.icon className="w-8 h-8 text-ocean" />
+                  {/* Background Image with blur */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 brightness-75"
+                    style={{ backgroundImage: `url('${activity.image}')` }}
+                  />
+                  
+                  {/* Gradient Overlay - más oscuro para legibilidad */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
+                  
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full mb-4">
+                      <activity.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold mb-2 text-white drop-shadow-lg">
+                      {activity.title}
+                    </h3>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      {activity.description}
+                    </p>
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-stone-dark mb-3">
-                    {activity.title}
-                  </h3>
-                  <p className="text-stone text-sm leading-relaxed">
-                    {activity.description}
-                  </p>
                 </motion.div>
               ))}
             </div>
