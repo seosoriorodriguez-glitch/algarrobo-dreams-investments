@@ -1,96 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Costa Algarrobo Design System - Premium Coastal Aesthetic */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 10% 25%;
 
+    /* Sand / Arena cálida */
+    --sand: 35 30% 95%;
+    --sand-dark: 35 25% 88%;
+
+    /* Stone Gray / Gris piedra */
+    --stone: 220 10% 40%;
+    --stone-light: 220 8% 60%;
+    --stone-dark: 220 12% 25%;
+
+    /* Ocean Blue / Azul mar profundo */
+    --ocean: 205 70% 35%;
+    --ocean-light: 205 65% 50%;
+    --ocean-dark: 205 75% 25%;
+
+    /* Olive Green / Verde oliva */
+    --olive: 85 25% 45%;
+    --olive-light: 85 20% 60%;
+
+    /* WhatsApp Green */
+    --whatsapp: 142 70% 40%;
+    --whatsapp-hover: 142 70% 35%;
+
+    /* Card & UI elements */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 10% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 10% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary = Ocean Blue */
+    --primary: 205 70% 35%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary = Sand */
+    --secondary: 35 30% 95%;
+    --secondary-foreground: 220 10% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted */
+    --muted: 35 20% 93%;
+    --muted-foreground: 220 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent = Ocean Light */
+    --accent: 205 65% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 205 70% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 35 30% 97%;
+    --sidebar-foreground: 220 10% 30%;
+    --sidebar-primary: 205 70% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 220 10% 25%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 205 70% 35%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 15% 10%;
+    --foreground: 35 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --sand: 35 15% 18%;
+    --sand-dark: 35 12% 14%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --stone: 220 8% 70%;
+    --stone-light: 220 6% 55%;
+    --stone-dark: 220 10% 85%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --ocean: 205 60% 55%;
+    --ocean-light: 205 55% 65%;
+    --ocean-dark: 205 65% 40%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --olive: 85 20% 55%;
+    --olive-light: 85 15% 45%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --whatsapp: 142 65% 45%;
+    --whatsapp-hover: 142 65% 40%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --card: 220 15% 13%;
+    --card-foreground: 35 20% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --popover: 220 15% 13%;
+    --popover-foreground: 35 20% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --primary: 205 60% 55%;
+    --primary-foreground: 220 15% 10%;
+
+    --secondary: 35 15% 18%;
+    --secondary-foreground: 35 20% 95%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 6% 60%;
+
+    --accent: 205 55% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 20%;
+    --input: 220 12% 20%;
+    --ring: 205 60% 55%;
+
+    --sidebar-background: 220 15% 12%;
+    --sidebar-foreground: 35 20% 90%;
+    --sidebar-primary: 205 60% 55%;
+    --sidebar-primary-foreground: 220 15% 10%;
+    --sidebar-accent: 220 12% 18%;
+    --sidebar-accent-foreground: 35 20% 95%;
+    --sidebar-border: 220 12% 20%;
+    --sidebar-ring: 205 60% 55%;
   }
 }
 
@@ -100,6 +140,136 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply text-stone-dark;
+  }
+}
+
+@layer components {
+  /* WhatsApp Button Animation */
+  .whatsapp-pulse {
+    animation: whatsapp-pulse 2s infinite;
+  }
+
+  @keyframes whatsapp-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(142 70% 40% / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 12px hsl(142 70% 40% / 0);
+    }
+  }
+
+  /* Scroll Fade In Animation */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Premium Card Hover Effect */
+  .premium-card {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .premium-card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px);
+  }
+
+  /* Elegant Link Underline */
+  .elegant-link {
+    @apply relative inline-block;
+  }
+
+  .elegant-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-ocean scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .elegant-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Hero Overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(220 15% 10% / 0.4) 0%,
+      hsl(220 15% 10% / 0.5) 50%,
+      hsl(220 15% 10% / 0.6) 100%
+    );
+  }
+
+  /* Section Divider */
+  .section-divider {
+    @apply w-24 h-1 bg-ocean mx-auto;
+  }
+}
+
+@layer utilities {
+  /* Custom text colors using design tokens */
+  .text-stone {
+    color: hsl(var(--stone));
+  }
+  .text-stone-light {
+    color: hsl(var(--stone-light));
+  }
+  .text-stone-dark {
+    color: hsl(var(--stone-dark));
+  }
+  .text-ocean {
+    color: hsl(var(--ocean));
+  }
+  .text-ocean-light {
+    color: hsl(var(--ocean-light));
+  }
+  .text-olive {
+    color: hsl(var(--olive));
+  }
+
+  /* Custom background colors */
+  .bg-sand {
+    background-color: hsl(var(--sand));
+  }
+  .bg-sand-dark {
+    background-color: hsl(var(--sand-dark));
+  }
+  .bg-ocean {
+    background-color: hsl(var(--ocean));
+  }
+  .bg-ocean-light {
+    background-color: hsl(var(--ocean-light));
+  }
+  .bg-ocean-dark {
+    background-color: hsl(var(--ocean-dark));
+  }
+  .bg-whatsapp {
+    background-color: hsl(var(--whatsapp));
+  }
+  .bg-whatsapp-hover {
+    background-color: hsl(var(--whatsapp-hover));
+  }
+  .bg-olive {
+    background-color: hsl(var(--olive));
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-ocean {
+    background: linear-gradient(135deg, hsl(var(--ocean)) 0%, hsl(var(--ocean-dark)) 100%);
+  }
+
+  .bg-gradient-sand {
+    background: linear-gradient(180deg, hsl(var(--sand)) 0%, hsl(0 0% 100%) 100%);
   }
 }
